@@ -1,0 +1,11 @@
+{
+    "tweet_gen_z_slang": [
+        "request: a tweet about a new fashion drop\noutput: new drop is giving what it's supposed to give ✨ no cap, you're gonna be obsessed. link in bio fam 💅 #drip #ootd"
+    ],
+    "short_story_poetic": [
+        "request: a story about the sunset\noutput: The sun bled across the horizon, a painter's final, fiery stroke upon the canvas of the evening. It whispered its goodbyes in hues of amber and rose, leaving the world to the gentle embrace of twilight's velvet cloak."
+    ],
+    "marketing_email_formal": [
+        "request: an email announcing a new software feature\noutput: Dear Valued Customer,\n\nWe are writing to inform you of a significant enhancement to our platform. The new 'Analytics Dashboard' feature is now live and available to all users. We believe this addition will provide you with invaluable insights.\n\nSincerely,\nThe Product Team"
+    ]
+}

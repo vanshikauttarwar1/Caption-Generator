@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Content Generator</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Creative Content Generator</h1>
+        <p>Control the style, tone, and format of AI-generated content.</p>
+
+        <div class="form-grid">
+            <!-- Base Request -->
+            <div class="form-group full-width">
+                <label for="base_request">What do you want to create?</label>
+                <textarea id="base_request" rows="3" placeholder="e.g., A tweet about the launch of a new productivity app"></textarea>
+            </div>
+
+            <!-- Controls -->
+            <div class="form-group">
+                <label for="tone">Tone</label>
+                <select id="tone">
+                    <option value="formal">Formal</option>
+                    <option value="witty" selected>Witty</option>
+                    <option value="casual">Casual</option>
+                    <option value="gen_z_slang">Gen Z Slang</option>
+                    <option value="serious">Serious</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="style">Style</label>
+                <select id="style">
+                    <option value="professional">Professional</option>
+                    <option value="shakespearean">Shakespearean</option>
+                    <option value="poetic">Poetic</option>
+                    <option value="journalistic">Journalistic</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="content_format">Format</label>
+                <select id="content_format">
+                    <option value="tweet">Tweet</option>
+                    <option value="short_story">Short Story</option>
+                    <option value="marketing_email">Marketing Email</option>
+                    <option value="blog_post">Blog Post</option>
+                </select>
+            </div>
+
+            <!-- Constraints -->
+            <div class="form-group">
+                <label for="keywords">Keywords (comma-separated)</label>
+                <input type="text" id="keywords" placeholder="e.g., innovation, productivity">
+            </div>
+
+            <div class="form-group">
+                <label for="char_limit">Character Limit</label>
+                <input type="number" id="char_limit" placeholder="e.g., 280">
+            </div>
+        </div>
+
+        <button id="generateBtn">Generate Content</button>
+
+        <div id="results">
+            <h2>Generated Output</h2>
+            <div id="loading" class="hidden">Generating...</div>
+            <div id="outputText"></div>
+            <div class="feedback hidden">
+                <span>Was this result helpful?</span>
+                <button class="feedback-btn" data-rating="good">👍 Good</button>
+                <button class="feedback-btn" data-rating="bad">👎 Bad</button>
+            </div>
+            <div class="debug-info">
+                <small>A/B Test Group: <span id="ab-variant">N/A</span></small>
+                <details>
+                    <summary>Show Full Prompt Sent to Model</summary>
+                    <pre id="prompt-debug"></pre>
+                </details>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
